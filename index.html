@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>114年律師一試詳解</title>
-   <style>
+ <style>
     * { 
         box-sizing: border-box; 
         margin: 0; 
@@ -12,39 +12,55 @@
     }
     body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        /* 質感升級：現代感微漸層背景 */
         background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
         min-height: 100vh;
-        padding: 50px 20px;
+        padding: 60px 20px;
     }
     .container { 
-        max-width: 740px; 
+        max-width: 800px; /* 限制最大寬度，確保版面絕對緊湊凝聚 */
         margin: 0 auto; 
     }
+    
+    /* 終極牛逼漸層標題設計 */
     h1 { 
         text-align: center; 
-        color: #0f172a; /* 深邃質感板岩藍 */
-        font-size: 2rem; 
-        font-weight: 800;
-        margin-bottom: 10px; 
-        letter-spacing: -0.5px;
+        font-size: 2.4rem; 
+        font-weight: 900;
+        margin-bottom: 12px; 
+        letter-spacing: -1px;
+        /* 科技感極光漸層色 */
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+    .title-icon {
+        -webkit-text-fill-color: initial; /* 讓閃電恢復原本耀眼的金色 */
+        font-size: 1.1em;
+        filter: drop-shadow(0 2px 8px rgba(234, 179, 8, 0.3));
     }
     .subtitle { 
         text-align: center; 
         color: #64748b; 
-        margin-bottom: 45px; 
-        font-size: 0.95rem; 
-        font-weight: 500;
+        margin-bottom: 50px; 
+        font-size: 1rem; 
+        font-weight: 600;
+        letter-spacing: 1px;
     }
+    
+    /* 強制鎖定為 3 欄經典九宮格排版，絕不橫向拉長 */
     .grid { 
         display: grid; 
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-        gap: 18px; 
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
     }
     .card {
         background: #ffffff; 
-        border-radius: 16px; /* 圓角微調得更精緻 */
-        padding: 20px 24px;
+        border-radius: 16px; 
+        padding: 22px 24px;
         text-decoration: none; 
         color: #1e293b;
         display: flex; 
@@ -55,7 +71,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .card:hover { 
-        transform: translateY(-4px) scale(1.02); 
+        transform: translateY(-5px) scale(1.02); 
         border-color: #cbd5e1;
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.02); 
     }
@@ -64,21 +80,21 @@
         flex-shrink: 0; 
     }
     .label { 
-        font-weight: 600; 
-        font-size: 1rem; 
+        font-weight: 700; 
+        font-size: 1.05rem; 
         letter-spacing: 0.5px;
     }
     
-    /* Threads 區塊高級感重製 */
+    /* Threads 質感黑曜石區塊 */
     .threads-cta {
         grid-column: 1 / -1;
         background: linear-gradient(135deg, #141414 0%, #000000 100%);
         color: #ffffff;
-        padding: 36px 32px;
+        padding: 38px 32px;
         border-radius: 24px;
         text-align: center;
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
-        margin-top: 30px;
+        margin-top: 25px;
         border: 1px solid rgba(255, 255, 255, 0.06);
     }
     .threads-cta h3 {
@@ -119,10 +135,25 @@
         font-size: 0.85em; 
         font-weight: 500;
     }
+
+    /* RWD 手機板自動適應，防擠壓破版 */
+    @media (max-width: 768px) {
+        .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+        .grid { grid-template-columns: 1fr; }
+        h1 { font-size: 1.8rem; }
+    }
 </style>
 </head>
 <body>
-<div class="grid">
+<div class="container">
+    <!-- 升級後的霸氣大標題 -->
+    <h1><span class="title-icon">⚡</span>114年律師高考一試詳解</h1>
+    <p class="subtitle">💡 點選考科即可直接開啟完整 PDF 解析</p>
+    
+    <div class="grid">
+        <!-- 完美保留你最滿意的原始科目圖案，僅更新強制執行法為🔨 -->
         <a class="card" href="114一試詳解-刑法.pdf" target="_blank"><span class="icon">⚖️</span><span class="label">刑法</span></a>
         <a class="card" href="114一試詳解-行政法.pdf" target="_blank"><span class="icon">🏛️</span><span class="label">行政法</span></a>
         <a class="card" href="114一試詳解-法律倫理.pdf" target="_blank"><span class="icon">📜</span><span class="label">法律倫理</span></a>
@@ -132,7 +163,6 @@
         <a class="card" href="114一試詳解-憲法.pdf" target="_blank"><span class="icon">🗽</span><span class="label">憲法</span></a>
         <a class="card" href="114一試詳解-民事訴訟法.pdf" target="_blank"><span class="icon">⚖️</span><span class="label">民事訴訟法</span></a>
         <a class="card" href="114一試詳解-刑事訴訟法.pdf" target="_blank"><span class="icon">🔍</span><span class="label">刑事訴訟法</span></a>
-        <!-- 唯獨這裡幫你升級成了象徵拍賣槌的 🔨 符號 -->
         <a class="card" href="114一試詳解-強制執行法.pdf" target="_blank"><span class="icon">🔨</span><span class="label">強制執行法</span></a>
         <a class="card" href="114一試詳解-證券交易法.pdf" target="_blank"><span class="icon">📈</span><span class="label">證券交易法</span></a>
         <a class="card" href="114一試詳解-公司法.pdf" target="_blank"><span class="icon">🏢</span><span class="label">公司法</span></a>
@@ -140,7 +170,7 @@
         <a class="card" href="114一試詳解-保險法.pdf" target="_blank"><span class="icon">🛡️</span><span class="label">保險法</span></a>
         <a class="card" href="114一試詳解-票據法.pdf" target="_blank"><span class="icon">📑</span><span class="label">票據法</span></a>
 
-        <!-- 下方繼續保留極具質感的 Threads 互動窗口 -->
+        <!-- Threads 互動區塊完美鎖定在底部 -->
         <div class="threads-cta">
             <h3>💬 破題疑問與即時勘誤</h3>
             <p>如果看完解題有任何步驟不清楚、發現盲點，或是想第一時間收到最新版本勘誤與法律見解更新，歡迎直接追蹤我的 Threads 交流窗口，我都會在上面即時回應大家！</p>
@@ -149,5 +179,8 @@
             </a>
         </div>
     </div>
+    
+    <footer>114年律師高考一試，各科詳解</footer>
+</div>
 </body>
 </html>
