@@ -4,95 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>114年律師一試詳解</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: #f0f2f5;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        .container { max-width: 700px; margin: 0 auto; }
-        h1 { text-align: center; color: #1a1a2e; font-size: 1.8em; margin-bottom: 8px; }
-        .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 0.95em; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; }
-        .card {
-            background: white; border-radius: 12px; padding: 20px;
-            text-decoration: none; color: #1a1a2e;
-            display: flex; align-items: center; gap: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
-        .icon { font-size: 1.8em; flex-shrink: 0; }
-        .label { font-weight: 600; font-size: 1em; }
-        .threads-cta {
-    grid-column: 1 / -1; /* 關鍵：這行會讓它在任何螢幕下都自動橫跨整排 */
-    background-color: #101010; /* Threads 質感黑 */
-    color: #ffffff;
-    padding: 24px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-top: 20px;
-}
-.threads-cta h3 {
-    margin: 0 0 8px 0;
-    color: #fff;
-    font-size: 1.2rem;
-}
-.threads-cta p {
-    color: #aaa;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0 0 16px 0;
-}
-.threads-btn {
-    display: inline-block;
-    background-color: #ffffff;
-    color: #101010;
-    padding: 10px 24px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
-.threads-btn:hover {
-    transform: scale(1.05);
-}
-        footer { text-align: center; margin-top: 50px; color: #aaa; font-size: 0.85em; }
-    </style>
+   <style>
+    * { 
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 0; 
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        /* 質感升級：現代感微漸層背景 */
+        background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        min-height: 100vh;
+        padding: 50px 20px;
+    }
+    .container { 
+        max-width: 740px; 
+        margin: 0 auto; 
+    }
+    h1 { 
+        text-align: center; 
+        color: #0f172a; /* 深邃質感板岩藍 */
+        font-size: 2rem; 
+        font-weight: 800;
+        margin-bottom: 10px; 
+        letter-spacing: -0.5px;
+    }
+    .subtitle { 
+        text-align: center; 
+        color: #64748b; 
+        margin-bottom: 45px; 
+        font-size: 0.95rem; 
+        font-weight: 500;
+    }
+    .grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        gap: 18px; 
+    }
+    .card {
+        background: #ffffff; 
+        border-radius: 16px; /* 圓角微調得更精緻 */
+        padding: 20px 24px;
+        text-decoration: none; 
+        color: #1e293b;
+        display: flex; 
+        align-items: center; 
+        gap: 14px;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card:hover { 
+        transform: translateY(-4px) scale(1.02); 
+        border-color: #cbd5e1;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.02); 
+    }
+    .icon { 
+        font-size: 1.6em; 
+        flex-shrink: 0; 
+    }
+    .label { 
+        font-weight: 600; 
+        font-size: 1rem; 
+        letter-spacing: 0.5px;
+    }
+    
+    /* Threads 區塊高級感重製 */
+    .threads-cta {
+        grid-column: 1 / -1;
+        background: linear-gradient(135deg, #141414 0%, #000000 100%);
+        color: #ffffff;
+        padding: 36px 32px;
+        border-radius: 24px;
+        text-align: center;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+        margin-top: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .threads-cta h3 {
+        margin: 0 0 10px 0;
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+    .threads-cta p {
+        color: #94a3b8; 
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 580px;
+        margin: 0 auto 24px auto;
+    }
+    .threads-btn {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 12px 36px;
+        border-radius: 9999px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease;
+    }
+    .threads-btn:hover {
+        transform: scale(1.04);
+        background-color: #f8fafc;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    footer { 
+        text-align: center; 
+        margin-top: 60px; 
+        color: #94a3b8; 
+        font-size: 0.85em; 
+        font-weight: 500;
+    }
+</style>
 </head>
 <body>
-<div class="container">
-    <h1>📚 114年律師一試詳解</h1>
-    <p class="subtitle">點選科目即可開啟 PDF</p>
-    <div class="grid">
+<div class="grid">
         <a class="card" href="114一試詳解-刑法.pdf" target="_blank"><span class="icon">⚖️</span><span class="label">刑法</span></a>
         <a class="card" href="114一試詳解-行政法.pdf" target="_blank"><span class="icon">🏛️</span><span class="label">行政法</span></a>
         <a class="card" href="114一試詳解-法律倫理.pdf" target="_blank"><span class="icon">📜</span><span class="label">法律倫理</span></a>
         <a class="card" href="114一試詳解-國際私法.pdf" target="_blank"><span class="icon">🌐</span><span class="label">國際私法</span></a>
-        <a class="card" href="114一試詳解-國際公法.pdf" target="_blank"><span class="icon">🌍</span><span class="label">國際公法</span></a>
+        <a class="card" href="114一試詳解-國際公法.pdf" target="_blank"><span class="icon">🌏</span><span class="label">國際公法</span></a>
         <a class="card" href="114一試詳解-民法.pdf" target="_blank"><span class="icon">📋</span><span class="label">民法</span></a>
         <a class="card" href="114一試詳解-憲法.pdf" target="_blank"><span class="icon">🗽</span><span class="label">憲法</span></a>
         <a class="card" href="114一試詳解-民事訴訟法.pdf" target="_blank"><span class="icon">⚖️</span><span class="label">民事訴訟法</span></a>
         <a class="card" href="114一試詳解-刑事訴訟法.pdf" target="_blank"><span class="icon">🔍</span><span class="label">刑事訴訟法</span></a>
-        <a class="card" href="114一試詳解-強制執行法.pdf" target="_blank"><span class="icon">📌</span><span class="label">強制執行法</span></a>
+        <!-- 唯獨這裡幫你升級成了象徵拍賣槌的 🔨 符號 -->
+        <a class="card" href="114一試詳解-強制執行法.pdf" target="_blank"><span class="icon">🔨</span><span class="label">強制執行法</span></a>
         <a class="card" href="114一試詳解-證券交易法.pdf" target="_blank"><span class="icon">📈</span><span class="label">證券交易法</span></a>
         <a class="card" href="114一試詳解-公司法.pdf" target="_blank"><span class="icon">🏢</span><span class="label">公司法</span></a>
-        <a class="card" href="114一試詳解-英文.pdf" target="_blank"><span class="icon">🔤</span><span class="label">英文</span></a>
+        <a class="card" href="114一試詳解-英文.pdf" target="_blank"><span class="icon">abc</span><span class="label">英文</span></a>
         <a class="card" href="114一試詳解-保險法.pdf" target="_blank"><span class="icon">🛡️</span><span class="label">保險法</span></a>
-        <a class="card" href="114一試詳解-票據法.pdf" target="_blank"><span class="icon">🧾</span><span class="label">票據法</span></a>
-        <!-- 放在票據法後面，</div>的前面 -->
-<div class="threads-cta">
-    <h3>💬 破題疑問與即時勘誤</h3>
-    <p>如果看完解題有任何步驟不清楚、發現盲點，或是想第一時間收到最新版本勘誤與法律見解更新，歡迎直接追蹤我的 Threads 交流窗口，我都會在上面即時回應大家！</p>
-    <a href="https://www.threads.net/@liuweihua827" target="_blank" class="threads-btn">
-        @liuweihua827 追蹤即時交流
-    </a>
-</div>
+        <a class="card" href="114一試詳解-票據法.pdf" target="_blank"><span class="icon">📑</span><span class="label">票據法</span></a>
+
+        <!-- 下方繼續保留極具質感的 Threads 互動窗口 -->
+        <div class="threads-cta">
+            <h3>💬 破題疑問與即時勘誤</h3>
+            <p>如果看完解題有任何步驟不清楚、發現盲點，或是想第一時間收到最新版本勘誤與法律見解更新，歡迎直接追蹤我的 Threads 交流窗口，我都會在上面即時回應大家！</p>
+            <a href="https://www.threads.net/@liuweihua827" target="_blank" class="threads-btn">
+                @liuweihua827 追蹤即時交流
+            </a>
+        </div>
     </div>
-    <footer>114年律師高考一試 · 各科詳解</footer>
-</div>
 </body>
 </html>
