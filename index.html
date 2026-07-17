@@ -2,27 +2,18 @@
 <html lang="zh-TW">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWQ9L5WD1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWQ9L5WD1S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SWQ9L5WD1S');
+    </script>
 
-  gtag('config', 'G-SWQ9L5WD1S');
-</script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWQ9L5WD1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SWQ9L5WD1S');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>114年律師一試詳解</title>
- <style>
+    <title>114年律師高考一試詳解</title>
+<style>
     * { 
         box-sizing: border-box; 
         margin: 0; 
@@ -35,18 +26,17 @@
         padding: 60px 20px;
     }
     .container { 
-        max-width: 800px; /* 限制最大寬度，確保版面絕對緊湊凝聚 */
+        max-width: 800px; 
         margin: 0 auto; 
     }
     
-    /* 終極牛逼漸層標題設計 */
+    /* 漸層標題 */
     h1 { 
         text-align: center; 
         font-size: 2.4rem; 
         font-weight: 900;
         margin-bottom: 12px; 
         letter-spacing: -1px;
-        /* 科技感極光漸層色 */
         background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #7c3aed 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -56,20 +46,93 @@
         gap: 12px;
     }
     .title-icon {
-        -webkit-text-fill-color: initial; /* 讓閃電恢復原本耀眼的金色 */
+        -webkit-text-fill-color: initial; 
         font-size: 1.1em;
         filter: drop-shadow(0 2px 8px rgba(234, 179, 8, 0.3));
     }
     .subtitle { 
         text-align: center; 
         color: #64748b; 
-        margin-bottom: 50px; 
+        margin-bottom: 35px; /* 微調間距以融入公告欄 */
         font-size: 1rem; 
         font-weight: 600;
         letter-spacing: 1px;
     }
     
-    /* 強制鎖定為 3 欄經典九宮格排版，絕不橫向拉長 */
+    /* 🆕 暖黃色現代感勘誤公告區塊 */
+    .notice-box {
+        background: #fffbeb; /* 柔和溫暖黃底色 */
+        border: 1px solid #fef08a;
+        border-left: 5px solid #eab308; /* 左側亮黃色警示條 */
+        border-radius: 16px;
+        padding: 20px 24px;
+        margin-bottom: 35px;
+        box-shadow: 0 4px 12px rgba(234, 179, 8, 0.05);
+        color: #451a03; /* 深暗棕色，極佳的可讀性 */
+        text-align: left;
+    }
+    .notice-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 12px;
+        border-bottom: 1px dashed rgba(234, 179, 8, 0.3);
+        padding-bottom: 8px;
+    }
+    .notice-tag {
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: #ca8a04;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .notice-time {
+        font-size: 0.85rem;
+        color: #854d0e;
+        font-weight: 500;
+    }
+    .notice-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+    .notice-details {
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 8px;
+        padding: 12px 16px;
+        list-style: none;
+        margin: 10px 0;
+        font-size: 0.9rem;
+    }
+    .notice-details li {
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+    .notice-details li:last-child {
+        margin-bottom: 0;
+    }
+    .strike-text {
+        text-decoration: line-through;
+        color: #ef4444; /* 紅色刪除線 */
+        font-weight: 700;
+    }
+    .highlight-text {
+        color: #10b981; /* 綠色正確更正 */
+        font-weight: 700;
+        background: #ecfdf5;
+        padding: 2px 6px;
+        border-radius: 4px;
+    }
+    .notice-action {
+        font-size: 0.9rem !important;
+        color: #854d0e;
+        margin-top: 10px;
+    }
+
+    /* 經典 3 欄九宮格 */
     .grid { 
         display: grid; 
         grid-template-columns: repeat(3, 1fr); 
@@ -103,7 +166,7 @@
         letter-spacing: 0.5px;
     }
     
-    /* Threads 質感黑曜石區塊 */
+    /* Threads 區塊 */
     .threads-cta {
         grid-column: 1 / -1;
         background: linear-gradient(135deg, #141414 0%, #000000 100%);
@@ -154,7 +217,7 @@
         font-weight: 500;
     }
 
-    /* RWD 手機板自動適應，防擠壓破版 */
+    /* RWD 手機板自動適應 */
     @media (max-width: 768px) {
         .grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -166,12 +229,27 @@
 </head>
 <body>
 <div class="container">
-    <!-- 升級後的霸氣大標題 -->
     <h1><span class="title-icon">⚡</span>114年律師高考一試詳解</h1>
     <p class="subtitle">💡 點選考科即可直接開啟完整 PDF 解析</p>
     
+    <!-- 🆕 勘誤公告區塊（大標與九宮格之間） -->
+    <div class="notice-box">
+        <div class="notice-header">
+            <span class="notice-tag">⚠️ 考科解析勘誤更正公告</span>
+            <span class="notice-time">更新時間：2026/07/17 下午 12:25</span>
+        </div>
+        <div class="notice-content">
+            <p><strong>【行政法】科目解析內容微調通知：</strong></p>
+            <p>行政法第 7 題（選項 D 破題解析）末段出現代號誤植，為免干擾備考觀念，現已更正完畢。具體修正如下：</p>
+            <ul class="notice-details">
+                <li>❌ <strong>原內容：</strong>「...為錯誤之敘述，惟本題要選錯誤的，故<span class="strike-text">B不選</span>」</li>
+                <li>✅ <strong>應更正為：</strong>「...為錯誤之敘述，而本題要選錯誤的，故<span class="highlight-text">選D</span>」</li>
+            </ul>
+            <p class="notice-action">💡 <strong>讀者提醒：</strong>若您是在上述更新時間前下載，請點選下方<strong>「行政法」</strong>卡片重新下載最新版 PDF。祝備考順利！</p>
+        </div>
+    </div>
+    
     <div class="grid">
-        <!-- 完美保留你最滿意的原始科目圖案，僅更新強制執行法為🔨 -->
         <a class="card" href="114一試詳解-刑法.pdf" target="_blank"><span class="icon">⚖️</span><span class="label">刑法</span></a>
         <a class="card" href="114一試詳解-行政法.pdf" target="_blank"><span class="icon">🏛️</span><span class="label">行政法</span></a>
         <a class="card" href="114一試詳解-法律倫理.pdf" target="_blank"><span class="icon">📜</span><span class="label">法律倫理</span></a>
@@ -188,7 +266,7 @@
         <a class="card" href="114一試詳解-保險法.pdf" target="_blank"><span class="icon">🛡️</span><span class="label">保險法</span></a>
         <a class="card" href="114一試詳解-票據法.pdf" target="_blank"><span class="icon">📑</span><span class="label">票據法</span></a>
 
-        <!-- Threads 互動區塊完美鎖定在底部 -->
+        <!-- Threads 互動區塊 -->
         <div class="threads-cta">
             <h3>💬 破題疑問與即時勘誤</h3>
             <p>如果看完解題有任何步驟不清楚、發現盲點，或是想第一時間收到最新版本勘誤與法律見解更新，歡迎直接追蹤我的 Threads 交流窗口，我都會在上面即時回應大家！</p>
